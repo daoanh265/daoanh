@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đào Mộng Anh, Ph.D. — Political Economy</title>
+<meta name="description" content="Trang cá nhân của TS. Đào Mộng Anh — giảng viên, nhà nghiên cứu Kinh tế Chính trị, Kinh tế thể chế và Kinh tế nông nghiệp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3ecdf;
+  --bg-soft:#f8f3e9;
+  --card:#fbf8f1;
+  --ink:#2f2a24;
+  --ink-soft:#5c554c;
+  --line:#e2d7c4;
+  --accent:#8a6d4f;
+  --accent-dark:#6f553c;
+  --shadow:0 1px 3px rgba(70,55,35,.06),0 8px 24px rgba(70,55,35,.06);
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.serif{font-family:'Lora',Georgia,serif}
+a{color:var(--accent-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+header.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(243,236,223,.85);
+  backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{max-width:880px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:'Lora',serif;font-weight:600;font-size:1.05rem;letter-spacing:.2px}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.nav-links a{color:var(--ink-soft);font-size:.92rem;font-weight:500}
+.nav-links a:hover{color:var(--accent-dark);text-decoration:none}
+.lang-toggle{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.lang-toggle button{
+  border:0;background:transparent;cursor:pointer;
+  padding:5px 12px;font:inherit;font-size:.8rem;font-weight:600;color:var(--ink-soft);
+}
+.lang-toggle button.active{background:var(--accent);color:#fff}
+
+/* HERO */
+.hero{padding:64px 0 40px;text-align:center}
+.avatar{
+  width:148px;height:148px;border-radius:50%;margin:0 auto 22px;
+  object-fit:cover;object-position:center top;display:block;
+  box-shadow:var(--shadow);border:4px solid var(--card);
+}
+.hero h1{font-size:2.2rem;font-weight:600;letter-spacing:.3px}
+.hero .role{color:var(--accent-dark);font-weight:500;margin-top:8px;font-size:1.05rem}
+.hero .affil{color:var(--ink-soft);font-size:.95rem;margin-top:4px}
+.contacts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.contacts a{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:7px 15px;font-size:.86rem;color:var(--ink-soft);font-weight:500;
+  transition:.18s;
+}
+.contacts a:hover{border-color:var(--accent);color:var(--accent-dark);text-decoration:none;transform:translateY(-1px)}
+.contacts svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.7}
+
+/* SECTIONS */
+section{padding:40px 0;border-top:1px solid var(--line)}
+.sec-title{display:flex;align-items:baseline;gap:12px;margin-bottom:26px}
+.sec-title h2{font-size:1.5rem;font-weight:600}
+.sec-title .num{font-size:.8rem;color:var(--accent);font-weight:600;letter-spacing:2px;font-family:'Inter',sans-serif}
+.lead{font-size:1.02rem;color:var(--ink-soft);max-width:62ch}
+.lead strong{color:var(--ink);font-weight:600}
+
+/* TIMELINE */
+.timeline{position:relative;margin-left:6px}
+.tl-item{position:relative;padding:0 0 26px 28px;border-left:2px solid var(--line)}
+.tl-item:last-child{border-left-color:transparent;padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-7px;top:4px;width:12px;height:12px;
+  border-radius:50%;background:var(--accent);border:3px solid var(--bg);
+}
+.tl-item .yr{font-size:.8rem;font-weight:600;color:var(--accent);letter-spacing:1px}
+.tl-item h3{font-size:1.05rem;font-weight:600;margin:3px 0 4px}
+.tl-item p{color:var(--ink-soft);font-size:.94rem}
+
+/* CARDS / RESEARCH */
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.chip{background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.85rem;color:var(--ink-soft);font-weight:500}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow)}
+.box h3{font-size:1.02rem;font-weight:600;margin-bottom:6px}
+.box p{font-size:.92rem;color:var(--ink-soft)}
+
+/* PUBLICATIONS */
+.pub{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-bottom:14px;box-shadow:var(--shadow)}
+.pub .ptitle{display:block;font-family:'Lora',serif;font-weight:500;font-size:1.05rem;color:var(--ink);text-decoration:none}
+.pub .ptitle:hover{color:var(--accent-dark);text-decoration:underline}
+.pub .pmeta{font-size:.88rem;color:var(--ink-soft);margin-top:5px}
+.pub .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.tag{font-size:.74rem;font-weight:600;letter-spacing:.3px;padding:3px 10px;border-radius:6px;background:#efe5d3;color:var(--accent-dark)}
+.stat-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+.stat{flex:1;min-width:120px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;text-align:center;box-shadow:var(--shadow)}
+.stat .n{font-family:'Lora',serif;font-size:1.9rem;font-weight:600;color:var(--accent-dark);line-height:1}
+.stat .l{font-size:.8rem;color:var(--ink-soft);margin-top:6px}
+
+/* CONTACT */
+.contact-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.contact-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.contact-row:last-child{border-bottom:0}
+.contact-row .k{color:var(--ink-soft);min-width:130px;font-weight:500}
+.contact-row svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:1.7}
+
+footer{text-align:center;padding:34px 0 48px;color:var(--ink-soft);font-size:.84rem;border-top:1px solid var(--line)}
+
+[data-en]{display:none}
+html[lang="en"] [data-vi]{display:none}
+html[lang="en"] [data-en]{display:revert}
+
+@media(max-width:680px){
+  .hero h1{font-size:1.8rem}
+  .grid{grid-template-columns:1fr}
+  .nav-links{gap:14px}
+  .nav-links a{font-size:.85rem}
+  .brand{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <span class="brand"><span data-vi>Đào Mộng Anh, Ph.D.</span><span data-en>Dao Anh, Ph.D.</span></span>
+    <nav class="nav-links">
+      <a href="#about"><span data-vi>Giới thiệu</span><span data-en>About</span></a>
+      <a href="#education"><span data-vi>Học vấn</span><span data-en>Education</span></a>
+      <a href="#publications"><span data-vi>Công bố</span><span data-en>Publications</span></a>
+      <a href="#contact"><span data-vi>Liên hệ</span><span data-en>Contact</span></a>
+      <span class="lang-toggle">
+        <button id="en-btn" class="active" onclick="setLang('en')">EN</button>
+        <button id="vi-btn" onclick="setLang('vi')">VI</button>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" id="about" style="border-top:none">
+    <img class="avatar" src="profile.jpg" alt="Đào Mộng Anh">
+    <h1><span data-vi>Đào Mộng Anh, Ph.D.</span><span data-en>Dao Anh, Ph.D.</span></h1>
+    <p class="role">
+      <span data-vi>Giảng viên</span>
+      <span data-en>Lecturer</span>
+    </p>
+    <p class="affil">
+      <span data-vi>Trường Đại học Thuỷ lợi</span>
+      <span data-en>Thuyloi University</span>
+    </p>
+    <div class="contacts">
+      <a href="mailto:daoanh@tlu.edu.vn">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        daoanh@tlu.edu.vn
+      </a>
+      <a href="https://scholar.google.com/citations?user=c7w57fsAAAAJ&hl=en" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.9V17"/><path d="M6 12.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg>
+        Google Scholar
+      </a>
+      <a href="https://orcid.org/0009-0003-7162-3328" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M12 8h2.5a4 4 0 0 1 0 8H12"/></svg>
+        ORCID
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT TEXT -->
+  <section style="border-top:1px solid var(--line)">
+    <p class="lead" data-vi>
+      Tôi là <strong>giảng viên tại Khoa Luật và Lý luận chính trị, Trường Đại học Thuỷ lợi</strong>.
+      Nghiên cứu của tôi tập trung vào chuyển đổi số trong bối cảnh phát triển mới, cùng các vấn đề
+      kinh tế chính trị và kinh tế thể chế, với mong muốn gắn kết chặt chẽ giữa nghiên cứu hàn lâm
+      và thực tiễn phát triển bền vững.
+    </p>
+    <p class="lead" data-en>
+      I am a <strong>lecturer at the Faculty of Law and Political Theory, Thuyloi University</strong>.
+      My research centers on digital transformation in an evolving development context, together with
+      questions of political economy and institutional economics, with a commitment to bridging
+      rigorous academic inquiry and the practical demands of sustainable development.
+    </p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="sec-title">
+      <span class="num">01</span>
+      <h2><span data-vi>Học vấn</span><span data-en>Education</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="yr">2025</div>
+        <h3><span data-vi>Tiến sĩ Kinh tế Chính trị</span><span data-en>Ph.D. in Political Economy</span></h3>
+        <p data-vi>Trường Đại học Kinh tế, ĐHQGHN. Luận án: <em>“Tác động của thu hồi đất nông nghiệp đến hộ gia đình trên địa bàn tỉnh Thái Bình.”</em></p>
+        <p data-en>University of Economics and Business, VNU Hanoi. Dissertation: <em>“The impact of agricultural land acquisition on households in Thai Binh province.”</em></p>
+      </div>
+      <div class="tl-item">
+        <div class="yr">2019</div>
+        <h3><span data-vi>Thạc sĩ Kinh tế Chính trị</span><span data-en>M.A. in Political Economy</span></h3>
+        <p data-vi>Học viện Chính trị, Bộ Quốc phòng. Luận văn: <em>“Tập trung ruộng đất trong sản xuất nông nghiệp tại tỉnh Thái Bình.”</em></p>
+        <p data-en>Political Academy, Ministry of National Defence. Thesis: <em>“Land consolidation in agricultural production in Thai Binh province.”</em></p>
+      </div>
+      <div class="tl-item">
+        <div class="yr"><span data-vi>Cử nhân</span><span data-en>B.A.</span></div>
+        <h3><span data-vi>Cử nhân Kinh tế</span><span data-en>B.A. in Economics</span></h3>
+        <p data-vi>Trường Đại học Kinh tế, ĐHQGHN. Nhận học bổng toàn phần cho chương trình trao đổi tại Đại học Quốc gia Yokohama, Nhật Bản (Top 100–200 châu Á — QS Asia, THE Asia).</p>
+        <p data-en>University of Economics and Business, VNU Hanoi. Awarded a full scholarship for an exchange program at Yokohama National University, Japan (Top 100–200 in Asia — QS Asia, THE Asia).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="sec-title">
+      <span class="num">02</span>
+      <h2><span data-vi>Công bố khoa học</span><span data-en>Publications</span></h2>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="n">10</div><div class="l"><span data-vi>Bài báo khoa học</span><span data-en>Research articles</span></div></div>
+      <div class="stat"><div class="n">02</div><div class="l"><span data-vi>Công bố quốc tế (Scopus/WoS)</span><span data-en>Int'l papers (Scopus/WoS)</span></div></div>
+      <div class="stat"><div class="n">01</div><div class="l"><span data-vi>Đề tài NCKH cấp cơ sở chủ trì</span><span data-en>Institutional grant (PI)</span></div></div>
+    </div>
+    <p class="lead block" data-vi style="margin-bottom:18px"><strong>Tiêu biểu — công bố quốc tế:</strong></p>
+    <p class="lead block" data-en style="margin-bottom:18px"><strong>Selected international publications:</strong></p>
+    <div class="pub">
+      <a class="ptitle" href="https://doi.org/10.36956/rwae.v6i3.1816" target="_blank" rel="noopener">Agricultural Land Acquisition and Its Challenges to Household Livelihood Resources: Evidence from Thai Binh, Vietnam</a>
+      <div class="pmeta"><em>Research on World Agricultural Economy</em>, 2025, pp. 389–407. · <a href="https://doi.org/10.36956/rwae.v6i3.1816" target="_blank" rel="noopener">doi.org/10.36956/rwae.v6i3.1816</a></div>
+      <div class="tags"><span class="tag">Scopus Q3</span><span class="tag">WoS (ESCI)</span></div>
+    </div>
+    <div class="pub">
+      <a class="ptitle" href="https://doi.org/10.24425/jwld.2024.151792" target="_blank" rel="noopener">Livelihood Adaptation Strategies of Farming Households to Land Acquisition: A Case Study in Vietnam</a>
+      <div class="pmeta"><em>Journal of Water and Land Development</em>, 2024. · <a href="https://doi.org/10.24425/jwld.2024.151792" target="_blank" rel="noopener">doi.org/10.24425/jwld.2024.151792</a></div>
+      <div class="tags"><span class="tag">Scopus Q2</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="sec-title">
+      <span class="num">03</span>
+      <h2><span data-vi>Liên hệ</span><span data-en>Contact</span></h2>
+    </div>
+    <div class="contact-box">
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <span class="k">Email</span>
+        <a href="mailto:daoanh@tlu.edu.vn">daoanh@tlu.edu.vn</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg>
+        <span class="k"><span data-vi>Cơ quan</span><span data-en>Affiliation</span></span>
+        <span><span data-vi>Trường Đại học Thuỷ lợi</span><span data-en>Thuyloi University</span></span>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.9V17"/><path d="M6 12.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg>
+        <span class="k">Google Scholar / ORCID</span>
+        <span><a href="https://scholar.google.com/citations?user=c7w57fsAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a> · <a href="https://orcid.org/0009-0003-7162-3328" target="_blank" rel="noopener">ORCID</a></span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span data-vi>© 2026 Đào Mộng Anh · Kinh tế Chính trị · Trường Đại học Thuỷ lợi</span>
+  <span data-en>© 2026 Dao Anh · Political Economy · Thuyloi University</span>
+</footer>
+
+<script>
+function setLang(l){
+  document.documentElement.lang = l;
+  document.getElementById('vi-btn').classList.toggle('active', l==='vi');
+  document.getElementById('en-btn').classList.toggle('active', l==='en');
+}
+</script>
+</body>
+</html>
